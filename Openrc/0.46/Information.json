@@ -1,0 +1,14 @@
+{
+  "port": "InitSystems-Main",
+  "name": "Openrc",
+  "version": "0.46",
+  "architectures": ["x86_64"],
+  "description": "The OpenRC init system",
+  "website": "https://github.com/OpenRC/openrc",
+  "downloadLinks": ["https://github.com/OpenRC/openrc/archive/refs/tags/0.46.tar.gz"],
+  "md5sums": ["dd8025d08c3b7e0167086753a03cd635"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
