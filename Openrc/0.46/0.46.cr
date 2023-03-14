@@ -3,7 +3,7 @@ class Target < ISM::Software
     def extract
         super
 
-        moveFile("#{workDirectoryPath(false)}/0.46","#{workDirectoryPath(false)}/openrc-0.46")
+        moveFile("#{workDirectoryPath(false)}/openrc-0.46","#{workDirectoryPath(false)}/0.46")
     end
 
     def prepare
