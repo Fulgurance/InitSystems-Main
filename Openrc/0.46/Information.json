@@ -9,6 +9,12 @@
   "md5sums": ["dd8025d08c3b7e0167086753a03cd635"],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "Linux-Pam",
+      "version": ">=1.5.1",
+      "options": []
+    }
+  ],
   "options": []
 }
