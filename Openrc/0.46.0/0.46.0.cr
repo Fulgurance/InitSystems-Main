@@ -26,4 +26,10 @@ class Target < ISM::Software
                                     {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
     end
 
+    def install
+        super
+
+        makeLink("openrc-init","#{Ism.settings.rootPath}sbin/init",:symbolicLink)
+    end
+
 end
