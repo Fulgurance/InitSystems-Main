@@ -11,6 +11,11 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
       "name": "Linux-Pam",
       "version": ">=1.5.1",
       "options": []
