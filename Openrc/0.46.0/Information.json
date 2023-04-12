@@ -19,6 +19,11 @@
       "name": "Linux-Pam",
       "version": ">=1.5.1",
       "options": []
+    },
+    {
+      "name": "Bison",
+      "version": "3.7.6",
+      "options": []
     }
   ],
   "options": []
