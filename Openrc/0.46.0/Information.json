@@ -19,11 +19,6 @@
       "name": "Linux-Pam",
       "version": ">=1.5.1",
       "options": []
-    },
-    {
-      "name": "Meson",
-      "version": "0.59.1",
-      "options": []
     }
   ],
   "options": []
