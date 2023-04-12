@@ -21,8 +21,8 @@
       "options": []
     },
     {
-      "name": "Bison",
-      "version": "3.7.6",
+      "name": "Meson",
+      "version": "0.59.1",
       "options": []
     }
   ],
