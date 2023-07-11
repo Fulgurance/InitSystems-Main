@@ -2,7 +2,9 @@
   "port": "InitSystems-Main",
   "name": "Openrc",
   "version": "0.46.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The OpenRC init system",
   "website": "https://github.com/OpenRC/openrc",
   "installedFiles": [],
