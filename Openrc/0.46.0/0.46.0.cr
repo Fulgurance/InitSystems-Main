@@ -4,8 +4,8 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        runMesonCommand(["setup","build"],mainWorkDirectoryPath)
-        runMesonCommand(["configure","build","-Dsysvinit=true"],mainWorkDirectoryPath)
+        runMesonCommand(["setup",@buildDirectoryName],mainWorkDirectoryPath)
+        runMesonCommand(["configure",@buildDirectoryName,"-Dsysvinit=true"],mainWorkDirectoryPath)
     end
 
     def build
