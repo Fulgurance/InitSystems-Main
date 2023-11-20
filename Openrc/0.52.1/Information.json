@@ -1,0 +1,26 @@
+{
+  "port": "InitSystems-Main",
+  "name": "Openrc",
+  "version": "0.52.1",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The OpenRC init system",
+  "website": "https://github.com/OpenRC/openrc",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "name": "Linux-Pam",
+      "version": ">=1.5.1",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
