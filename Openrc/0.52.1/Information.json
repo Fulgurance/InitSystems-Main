@@ -13,7 +13,7 @@
       "name": "@SystemGroups-Main:Uucp",
       "version": ">=0.1.0",
       "options": []
-    }
+    },
     {
       "name": "Linux-Pam",
       "version": ">=1.5.1",
