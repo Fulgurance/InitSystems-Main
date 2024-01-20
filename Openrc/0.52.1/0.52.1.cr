@@ -30,8 +30,6 @@ class Target < ISM::Software
     def install
         super
 
-        runGroupAddCommand(["uucp"])
-
         (1..6).each do |value|
             makeLink("agetty","#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",:symbolicLink)
             runRcUpdateCommand(["add","agetty.tty#{value}","default"])
