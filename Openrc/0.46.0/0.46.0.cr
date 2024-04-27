@@ -3,27 +3,31 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-
-        runMesonCommand(["setup",@buildDirectoryNames["MainBuild"]],mainWorkDirectoryPath)
     end
 
     def configure
         super
 
-        runMesonCommand(["configure",@buildDirectoryNames["MainBuild"],"-Dsysvinit=true"],mainWorkDirectoryPath)
+        runMesonCommand([   "setup",
+                            "--reconfigure",
+                            "-Dauto_features=disabled",
+                            @buildDirectoryNames["MainBuild"],"-Dsysvinit=true"],
+                            mainWorkDirectoryPath)
     end
 
     def build
         super
 
-        runMesonCommand(["compile"],buildDirectoryPath)
+        runMesonCommand([   "compile"],
+                            buildDirectoryPath)
     end
 
     def prepareInstallation
         super
 
-        runMesonCommand(["install"],buildDirectoryPath,
-                                    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+        runMesonCommand([   "install"],
+                            buildDirectoryPath,
+                            {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
     end
 
