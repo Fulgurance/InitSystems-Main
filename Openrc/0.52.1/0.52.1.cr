@@ -10,7 +10,6 @@ class Target < ISM::Software
 
         runMesonCommand([   "setup",
                             "--reconfigure",
-                            "-Dauto_features=disabled",
                             @buildDirectoryNames["MainBuild"],"-Dsysvinit=true"],
                             mainWorkDirectoryPath)
     end
