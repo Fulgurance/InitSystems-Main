@@ -2,19 +2,19 @@
   "port": "InitSystems-Main",
   "name": "Openrc",
   "version": "0.52.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The OpenRC init system",
   "website": "https://github.com/OpenRC/openrc",
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "@SystemGroups-Main:Uucp",
+      "port": "SystemGroups-Main",
+      "name": "Uucp",
       "version": ">=0.1.0",
       "options": []
     },
     {
+      "port": "Security-Main",
       "name": "Linux-Pam",
       "version": ">=1.5.1",
       "options": []
