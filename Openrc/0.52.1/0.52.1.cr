@@ -28,13 +28,13 @@ class Target < ISM::Software
                             buildDirectoryPath,
                             {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}sbin")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin")
 
         (1..6).each do |value|
-            makeLink("agetty","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",:symbolicLink)
+            makeLink("agetty","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",:symbolicLink)
         end
 
-        makeLink("openrc-init","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}sbin/init",:symbolicLink)
+        makeLink("openrc-init","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin/init",:symbolicLink)
     end
 
     def install
