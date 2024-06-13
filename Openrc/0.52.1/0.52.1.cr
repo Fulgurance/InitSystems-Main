@@ -8,40 +8,44 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand([   "setup",
-                            "--reconfigure",
-                            @buildDirectoryNames["MainBuild"],"-Dsysvinit=true"],
-                            mainWorkDirectoryPath)
+        runMesonCommand(arguments:  "setup --reconfigure                \
+                                    #{@buildDirectoryNames["MainBuild"]}\
+                                    -Dsysvinit=true",
+                        path:       mainWorkDirectoryPath)
     end
 
     def build
         super
 
-        runMesonCommand([   "compile"],
-                            buildDirectoryPath)
+        runMesonCommand(arguments:  "compile",
+                        path:       buildDirectoryPath)
     end
 
     def prepareInstallation
         super
 
-        runMesonCommand([   "install"],
-                            buildDirectoryPath,
-                            {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+        runMesonCommand(arguments:      "install",
+                        path:           buildDirectoryPath,
+                        environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin")
 
         (1..6).each do |value|
-            makeLink("agetty","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",:symbolicLink)
+            makeLink(   target: "agetty",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",
+                        type:   :symbolicLink)
         end
 
-        makeLink("openrc-init","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin/init",:symbolicLink)
+        makeLink(   target: "openrc-init",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin/init",
+                    type:   :symbolicLink)
     end
 
     def install
         super
 
         (1..6).each do |value|
-            runRcUpdateCommand(["add","agetty.tty#{value}","default"])
+            runRcUpdateCommand(arguments:   "add agetty.tty#{value} default")
         end
     end
 
