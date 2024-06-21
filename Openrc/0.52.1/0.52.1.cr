@@ -30,12 +30,6 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin")
 
-        (1..6).each do |value|
-            makeLink(   target: "agetty",
-                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d/agetty.tty#{value}",
-                        type:   :symbolicLink)
-        end
-
         makeLink(   target: "openrc-init",
                     path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin/init",
                     type:   :symbolicLink)
