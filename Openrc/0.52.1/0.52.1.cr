@@ -8,8 +8,8 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(arguments:  "setup --reconfigure                \
-                                    #{@buildDirectoryNames["MainBuild"]}\
+        runMesonCommand(arguments:  "setup --reconfigure                    \
+                                    #{@buildDirectoryNames["MainBuild"]}    \
                                     -Dsysvinit=true",
                         path:       mainWorkDirectoryPath)
     end
