@@ -32,7 +32,7 @@ class Target < ISM::Software
 
         makeLink(   target: "openrc-init",
                     path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin/init",
-                    type:   :symbolicLink)
+                    type:   :symbolicLinkByOverwrite)
     end
 
     def install
