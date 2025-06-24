@@ -1,6 +1,0 @@
-{
-  "name": "InitSystems-Main",
-  "url": "https://github.com/Fulgurance/InitSystems-Main",
-  "publicKeyUrl": "http://www.slashlinux.io/keyring/Fulgurance.key",
-  "description": "Port that contain all softwares that initialize the system"
-}
