@@ -1,0 +1,20 @@
+PORT
+    InitSystems-Main
+NAME
+    Openrc
+VERSION
+    0.55.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The OpenRC init system
+WEBSITE
+    https://github.com/OpenRC/openrc
+DEPENDENCIES
+        @SystemGroups-Main:Uucp>=0.1.0
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.1
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
